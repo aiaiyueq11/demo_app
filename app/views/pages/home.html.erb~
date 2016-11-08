@@ -4,9 +4,9 @@
       <title>Ruby on Rails Tutorial Sample App | <%= @title%></title>
    </head>
    <boby>
-	<h1>Contact</h1>
+	<h1>Pages#home</h1>
 	<p>
- 	   Contact Ruby on Rails tutorial about the sample app at the        <a href = "https://railstutorial.org/feedback">feedback pages</a>
+ 	   Find is the home apge for the <a href = "https://railstutorial.org/">Ruby on Rails Tutorial</a>
  	</p>
    </boby>
 </html>
