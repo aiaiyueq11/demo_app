@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>Ruby on Rails Tutorial Sample App | <%= @title%></title>
-   </head>
-   <boby>
-	<h1>Pages#home</h1>
-	<p>
+<h1>Sample App</h1>
+<p>
  	   Find is the home apge for the <a href = "https://railstutorial.org/">Ruby on Rails Tutorial</a>
- 	</p>
-   </boby>
-</html>
+ </p>
+
