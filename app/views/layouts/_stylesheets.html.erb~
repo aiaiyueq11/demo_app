@@ -1,0 +1,3 @@
+<%= stylesheets_link_tag 'blueprint/screen',:media => 'screen' %>
+<%= stylesheets_link_tag 'blueprint/print',:media => 'print' %>
+<%= stylesheets_link_tag 'custom',:media => 'screen' %>

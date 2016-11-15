@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
+  <title><%= @title %></title>
   <%= csrf_meta_tag %>
   <%= render 'layouts/stylesheets' %>
+  <%= stylesheets_link_tag 'blueprint/screen',:media => 'screen' %>
+  <%= stylesheets_link_tag 'blueprint/print',:media => 'print' %>
+  <%= stylesheets_link_tag 'custom',:media => 'screen' %>
 </head>
 <body>
 <div class = "container">
