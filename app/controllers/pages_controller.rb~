@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
-  def action
-       @title = "action"
+  def help
+       @title = "help"
   end
   def home
       @title = "Home"
