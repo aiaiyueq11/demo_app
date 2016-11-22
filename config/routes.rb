@@ -1,9 +1,10 @@
 DemoApp::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/cantact"
-
-  get "pages/about"
+  #get "pages/home"
+ match'/home', :to =>'pages#home'
+#root :to =>'pages#home'
+ match'/contact', :to =>'pages#contact'
+ match'/about', :to =>'pages#about'
+  #get "pages/about"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
