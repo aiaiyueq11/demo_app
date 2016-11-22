@@ -1,4 +1,7 @@
 DemoApp::Application.routes.draw do
+  resources :users
+
+
   #get "pages/home"
  #match'/home', :to =>'pages#home'
 root :to =>'pages#home'
