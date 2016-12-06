@@ -1,5 +1,6 @@
 <h1>Sample App</h1>
-<p>
- 	   Find is the home apge for the <a href = "https://railstutorial.org/">Ruby on Rails Tutorial</a>
- </p>
 
+<p>
+this is the home apge for the <a href = "https://railstutorial.org/">Ruby on Rails Tutorial</a>
+</p>
+ <%= link_to"Sign up now!",signup_path,:class => "signup_button round" %>

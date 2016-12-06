@@ -1,14 +1,21 @@
 DemoApp::Application.routes.draw do
+  resources :sessions, :only =>[:new, :create, :destory]
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+
+  match'/signup', :to => 'users#new'
+  match'/contact', :to =>'pages#contact'
+  match'/help', :to =>'pages#help'
+  match'/about', :to =>'pages#about'
+  match'/users/new', :to =>'users#new'
+  root :to =>'pages#home'
+
+
   resources :users
 
 
-  #get "pages/home"
+ #get "pages/home"
  #match'/home', :to =>'pages#home'
- root :to =>'pages#home'
- match'/contact', :to =>'pages#contact'
- match'/help', :to =>'pages#help'
- match'/about', :to =>'pages#about'
- match'/user/new', :to =>'user#new'
   #get "pages/about"
   # The priority is based upon order of creation:
   # first created -> highest priority.

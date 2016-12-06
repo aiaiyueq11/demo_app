@@ -2,9 +2,13 @@
 	   <%= image_tag("logo.png",:alt =>"Sample App",:class => "round") %>
 	   <nav class = "round">
                <ul>
- 		 <li><%= link_to "Home",'#'%></li>
-		 <li><%= link_to "Help",'#'%></li>
-		 <li><%= link_to "Sing In",'#'%></li>
+ 		 <li><%= link_to "Home",root_path%></li>
+		 <li><%= link_to "Help",help_path%></li>
+
+                 <% if current_user.nil? %>
+		 <li><%= link_to "Sign In",signin_path%></li>
+                 <% else %>
+                 <li><%= link_to "Sign Out",signout_path, :method => :delete %></li>
 	       </ul>
            </nav>
 </header>

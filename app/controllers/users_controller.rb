@@ -1,6 +1,24 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+before_filter :authenticate, :only => [:edit, :update, :destory]
+
+ private
+   
+  def authenticate
+    if current_user.nil?
+      redirect_to signin_path, :notice => "please sign in."
+    else
+      user = User.find(params[:id])
+      if user != current_user
+       redirect_to root_path,
+         :notice => "editing other users is not allowed."
+      end
+    end
+  end
+  
+ public
+     
   def index
     @users = User.all
 
@@ -19,6 +37,7 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @user }
     end
+
   end
 
   # GET /users/new
@@ -44,11 +63,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
+         sign_in @user
+         redirect_to @user
       else
-        format.html { render action: "new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+         @title = "Sign up"
+         render "new"
       end
     end
   end
