@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
-before_filter :authenticate, :only => [:edit, :update, :destory]
+  before_filter :authenticate, :only => [:edit, :update, :destroy]
 
  private
    
